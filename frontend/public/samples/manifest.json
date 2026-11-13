@@ -1,0 +1,30 @@
+{
+  "images": [
+    {
+      "per_image_attribution": "Not supplied in dataset README",
+      "location": null,
+      "source_url": "https://huggingface.co/datasets/jennifer-fowler/UTSA-flood-images/resolve/main/images/AF001.jpg",
+      "original_filename": "AF001.jpg",
+      "capture_date": null
+    },
+    {
+      "per_image_attribution": "Not supplied in dataset README",
+      "location": null,
+      "source_url": "https://huggingface.co/datasets/jennifer-fowler/UTSA-flood-images/resolve/main/images/HC001.png",
+      "original_filename": "HC001.png",
+      "capture_date": null
+    },
+    {
+      "per_image_attribution": "Not supplied in dataset README",
+      "location": null,
+      "source_url": "https://huggingface.co/datasets/jennifer-fowler/UTSA-flood-images/resolve/main/images/HC002.png",
+      "original_filename": "HC002.png",
+      "capture_date": null
+    }
+  ],
+  "dataset_url": "https://huggingface.co/datasets/jennifer-fowler/UTSA-flood-images",
+  "attribution": "UTSA flood images dataset, published by jennifer-fowler. Dataset README supplies no individual photographer credits, capture dates, or locations.",
+  "license": "CC BY-NC 4.0",
+  "dataset": "jennifer-fowler/UTSA-flood-images",
+  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/"
+}

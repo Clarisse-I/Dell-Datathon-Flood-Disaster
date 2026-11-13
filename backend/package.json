@@ -1,0 +1,1 @@
+{"name":"cutoff-model-bridge","private":true,"type":"module","scripts":{"start":"node --env-file-if-exists=.env server.mjs"},"dependencies":{"express":"^5.1.0","multer":"^2.0.2","sharp":"^0.35.5"}}

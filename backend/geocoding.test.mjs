@@ -1,0 +1,5 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import express from 'express';
+import {geocoding} from './geocoding.mjs';
+test('geocoder returns selectable real-provider shapes, caches searches and rejects short queries',async()=>{const original=globalThis.fetch;let calls=0;globalThis.fetch=async(url,options)=>{if(!String(url).startsWith('https://nominatim'))return original(url,options);calls++;assert.match(options.headers['User-Agent'],/CutOff/);return Response.json([{place_id:123,display_name:'Test library, Test city',lat:'29.43',lon:'-98.49'}]);};const app=express();app.use('/api',geocoding);const server=app.listen(0,'127.0.0.1');await new Promise(r=>server.once('listening',r));const base='http://127.0.0.1:'+server.address().port;try{for(let i=0;i<2;i++){const r=await original(base+'/api/search?q=Test+library');assert.equal(r.status,200);assert.deepEqual((await r.json())[0].point,[29.43,-98.49]);}assert.equal(calls,1);assert.equal((await original(base+'/api/search?q=x')).status,400);}finally{server.close();globalThis.fetch=original;}});

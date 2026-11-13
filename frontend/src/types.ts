@@ -1,0 +1,1 @@
+export type Analysis={observations:string[];actions:string[];uncertainty?:string};
